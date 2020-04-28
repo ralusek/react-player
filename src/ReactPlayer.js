@@ -44,7 +44,10 @@ export default class ReactPlayer extends Component {
 
   refs = {
     wrapper: wrapper => { this.wrapper = wrapper },
-    player: player => { this.player = player }
+  }
+
+  componentDidMount() {
+    this.props.setPlayerRef(this)
   }
 
   shouldComponentUpdate (nextProps, nextState) {
@@ -142,7 +145,7 @@ export default class ReactPlayer extends Component {
       <Player
         {...this.props}
         key={player.key}
-        ref={this.refs.player}
+        setPlayerRef={player => this.player = player}
         config={config}
         activePlayer={player.lazyPlayer || player}
         onReady={this.handleReady}

@@ -21,6 +21,7 @@ export default class Player extends Component {
 
   componentDidMount () {
     this.mounted = true
+    this.props.setPlayerRef(this)
   }
 
   componentWillUnmount () {

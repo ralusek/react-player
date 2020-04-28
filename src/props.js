@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 const { string, bool, number, array, oneOfType, shape, object, func, node } = PropTypes
 
 export const propTypes = {
+  setPlayerRef: func,
   url: oneOfType([string, array, object]),
   playing: bool,
   loop: bool,

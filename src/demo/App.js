@@ -160,7 +160,7 @@ class App extends Component {
           <h1>ReactPlayer Demo</h1>
           <div className='player-wrapper'>
             <ReactPlayer
-              ref={this.ref}
+              setPlayerRef={(player) => this.player = player}
               className='react-player'
               width='100%'
               height='100%'
